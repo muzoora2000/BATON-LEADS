@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VA Dashboard — Baton Leads Company</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard-body">
+
+    <!-- Top Bar -->
+    <div class="dashboard-topbar">
+        <div class="topbar-left">
+            <div class="nav-logo small">BL</div>
+            <span class="topbar-title">BATON LEADS &mdash; VA Dashboard</span>
+        </div>
+        <div class="topbar-right">
+            <div class="topbar-stat">
+                <span class="online-dot small"></span>
+                <span>Online</span>
+            </div>
+            <div class="topbar-stat">
+                <span class="stat-badge">5</span>
+                <span>Active Chats</span>
+            </div>
+            <div class="topbar-stat">
+                <span class="stat-badge queue">3</span>
+                <span>In Queue</span>
+            </div>
+            <div class="va-profile">
+                <div class="va-avatar-small">S</div>
+                <span>Sarah K.</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="dashboard-layout">
+
+        <!-- Left: Chat List -->
+        <div class="dashboard-sidebar">
+            <div class="sidebar-search">
+                <input type="text" placeholder="🔍  Search chats...">
+            </div>
+            <div class="sidebar-tabs">
+                <button class="tab-btn active" onclick="switchTab(this)">All (8)</button>
+                <button class="tab-btn" onclick="switchTab(this)">Active (5)</button>
+                <button class="tab-btn" onclick="switchTab(this)">Queued (3)</button>
+            </div>
+            <div class="chat-list">
+                <div class="chat-list-item active-chat selected" onclick="selectChat(this,'James O.','james.o@email.com','Active Client','March 2025')">
+                    <div class="chat-item-avatar green">J</div>
+                    <div class="chat-item-info">
+                        <div class="chat-item-top">
+                            <span class="chat-item-name">James O.</span>
+                            <span class="chat-item-time">2:34 PM</span>
+                        </div>
+                        <div class="chat-item-bottom">
+                            <span class="chat-item-preview">I need help with my referral link</span>
+                            <span class="unread-badge">2</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-list-item active-chat" onclick="selectChat(this,'Amaka F.','amaka.f@email.com','Active Client','Jan 2025')">
+                    <div class="chat-item-avatar green">A</div>
+                    <div class="chat-item-info">
+                        <div class="chat-item-top">
+                            <span class="chat-item-name">Amaka F.</span>
+                            <span class="chat-item-time">2:21 PM</span>
+                        </div>
+                        <div class="chat-item-bottom">
+                            <span class="chat-item-preview">Can you call me back please?</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-list-item active-chat" onclick="selectChat(this,'Emeka T.','emeka.t@email.com','Active Client','Feb 2025')">
+                    <div class="chat-item-avatar blue">E</div>
+                    <div class="chat-item-info">
+                        <div class="chat-item-top">
+                            <span class="chat-item-name">Emeka T.</span>
+                            <span class="chat-item-time">1:58 PM</span>
+                        </div>
+                        <div class="chat-item-bottom">
+                            <span class="chat-item-preview">Thanks, that was very helpful!</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-list-item active-chat" onclick="selectChat(this,'Chidera N.','chidera.n@email.com','Active Client','Apr 2025')">
+                    <div class="chat-item-avatar purple">C</div>
+                    <div class="chat-item-info">
+                        <div class="chat-item-top">
+                            <span class="chat-item-name">Chidera N.</span>
+                            <span class="chat-item-time">1:45 PM</span>
+                        </div>
+                        <div class="chat-item-bottom">
+                            <span class="chat-item-preview">What's the onboarding process?</span>
+                            <span class="unread-badge">1</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-list-item active-chat" onclick="selectChat(this,'Nkechi B.','nkechi.b@email.com','Active Client','Dec 2024')">
+                    <div class="chat-item-avatar orange">N</div>
+                    <div class="chat-item-info">
+                        <div class="chat-item-top">
+                            <span class="chat-item-name">Nkechi B.</span>
+                            <span class="chat-item-time">1:30 PM</span>
+                        </div>
+                        <div class="chat-item-bottom">
+                            <span class="chat-item-preview">Okay, I understand. Thank you!</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat-list-divider">IN QUEUE</div>
+
+                <div class="chat-list-item queued-chat" onclick="selectChat(this,'Tunde A.','tunde.a@email.com','New Client','—')">
+                    <div class="chat-item-avatar gray">T</div>
+                    <div class="chat-item-info">
+                        <div class="chat-item-top">
+                            <span class="chat-item-name">Tunde A.</span>
+                            <span class="chat-item-time chat-item-badge">Waiting</span>
+                        </div>
+                        <div class="chat-item-bottom">
+                            <span class="chat-item-preview">2nd in queue &middot; ~1 min</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-list-item queued-chat" onclick="selectChat(this,'Blessing C.','blessing.c@email.com','New Client','—')">
+                    <div class="chat-item-avatar gray">B</div>
+                    <div class="chat-item-info">
+                        <div class="chat-item-top">
+                            <span class="chat-item-name">Blessing C.</span>
+                            <span class="chat-item-time chat-item-badge">Waiting</span>
+                        </div>
+                        <div class="chat-item-bottom">
+                            <span class="chat-item-preview">3rd in queue &middot; ~2 min</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-list-item queued-chat" onclick="selectChat(this,'Rotimi P.','rotimi.p@email.com','New Client','—')">
+                    <div class="chat-item-avatar gray">R</div>
+                    <div class="chat-item-info">
+                        <div class="chat-item-top">
+                            <span class="chat-item-name">Rotimi P.</span>
+                            <span class="chat-item-time chat-item-badge">Waiting</span>
+                        </div>
+                        <div class="chat-item-bottom">
+                            <span class="chat-item-preview">4th in queue &middot; ~3 min</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Center: Chat View -->
+        <div class="dashboard-chat">
+            <div class="dashboard-chat-header">
+                <div class="chat-header-info">
+                    <div class="chat-item-avatar green large" id="dashAvatarLetter">J</div>
+                    <div>
+                        <span class="va-name" id="selectedChatName">James O.</span>
+                        <span class="va-status"><span class="online-dot small"></span> Active &middot; Ticket #BL-2041</span>
+                    </div>
+                </div>
+                <div class="chat-header-actions">
+                    <button class="header-btn">🔄 Reassign</button>
+                    <button class="header-btn danger">✓ Close Chat</button>
+                </div>
+            </div>
+
+            <div class="dashboard-messages" id="dashboardMessages">
+                <div class="system-msg"><span>Chat started &middot; 2:20 PM &middot; Ticket #BL-2041</span></div>
+                <div class="message va-message">
+                    <div class="msg-avatar">S</div>
+                    <div class="msg-content">
+                        <div class="bubble va-bubble">Hello James! Welcome to Baton Leads. How can I assist you today?</div>
+                        <span class="msg-time">2:20 PM</span>
+                    </div>
+                </div>
+                <div class="message user-message">
+                    <div class="msg-content">
+                        <div class="bubble user-bubble">Hi! I need help with my referral link — it doesn't seem to be working.</div>
+                        <span class="msg-time">2:22 PM</span>
+                    </div>
+                </div>
+                <div class="message va-message">
+                    <div class="msg-avatar">S</div>
+                    <div class="msg-content">
+                        <div class="bubble va-bubble">Of course! Let me look into that right away. Could you share your account email so I can verify your referral details?</div>
+                        <span class="msg-time">2:23 PM</span>
+                    </div>
+                </div>
+                <div class="message user-message">
+                    <div class="msg-content">
+                        <div class="bubble user-bubble">Sure — james.o@email.com</div>
+                        <span class="msg-time">2:25 PM</span>
+                    </div>
+                </div>
+                <div class="message va-message">
+                    <div class="msg-avatar">S</div>
+                    <div class="msg-content">
+                        <div class="bubble va-bubble">Got it! I can see your account. The referral link needs to be regenerated — doing that now. It should work in 2 minutes! 🔧</div>
+                        <span class="msg-time">2:28 PM</span>
+                    </div>
+                </div>
+                <div class="message user-message">
+                    <div class="msg-content">
+                        <div class="bubble user-bubble">I need help with my referral link</div>
+                        <span class="msg-time">2:34 PM</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reply Templates -->
+            <div class="reply-templates">
+                <span class="templates-label">Templates:</span>
+                <button class="template-btn" onclick="useTemplate('Hello! Welcome to Baton Leads. How can I assist you today?')">Welcome</button>
+                <button class="template-btn" onclick="useTemplate('Let me look into that for you right away!')">Checking</button>
+                <button class="template-btn" onclick="useTemplate('Your referral has been sent successfully! ✅')">Referral Sent</button>
+                <button class="template-btn" onclick="useTemplate('Is there anything else I can help you with?')">Closing</button>
+            </div>
+
+            <div class="input-area dashboard-input">
+                <input type="text" id="dashInput" placeholder="Reply to James..." onkeypress="handleDashKeyPress(event)">
+                <button class="send-btn" onclick="sendDashMessage()">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="22" y1="2" x2="11" y2="13"/>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Right: Info Panel -->
+        <div class="dashboard-info-panel">
+            <div class="info-panel-section">
+                <h4>Client Info</h4>
+                <div class="info-row">
+                    <span class="info-label">Name</span>
+                    <span class="info-val" id="panelName">James Okonkwo</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Email</span>
+                    <span class="info-val" id="panelEmail">james.o@email.com</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Status</span>
+                    <span class="info-val green-text" id="panelStatus">Active Client</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Joined</span>
+                    <span class="info-val" id="panelJoined">March 2025</span>
+                </div>
+            </div>
+            <div class="info-panel-section">
+                <h4>My Stats Today</h4>
+                <div class="dash-stat-card">
+                    <span class="dash-stat-num">5</span>
+                    <span class="dash-stat-label">Active Chats</span>
+                </div>
+                <div class="dash-stat-card">
+                    <span class="dash-stat-num">3</span>
+                    <span class="dash-stat-label">In Queue</span>
+                </div>
+                <div class="dash-stat-card">
+                    <span class="dash-stat-num">42</span>
+                    <span class="dash-stat-label">Resolved Today</span>
+                </div>
+                <div class="dash-stat-card">
+                    <span class="dash-stat-num">1.8m</span>
+                    <span class="dash-stat-label">Avg Response</span>
+                </div>
+            </div>
+            <div class="info-panel-section">
+                <h4>Chat History</h4>
+                <div class="history-item">
+                    <span class="history-date">Apr 28</span>
+                    <span class="history-topic">Referral issue resolved</span>
+                    <span class="history-badge resolved">✓</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">Apr 15</span>
+                    <span class="history-topic">Account setup support</span>
+                    <span class="history-badge resolved">✓</span>
+                </div>
+                <div class="history-item">
+                    <span class="history-date">Apr 02</span>
+                    <span class="history-topic">First contact inquiry</span>
+                    <span class="history-badge resolved">✓</span>
+                </div>
+            </div>
+            <a href="index.html" class="back-home-btn">&#8592; Back to Home</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

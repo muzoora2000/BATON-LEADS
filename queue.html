@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connecting... — Baton Leads Company</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="queue-body">
+    <div class="queue-container">
+        <div class="queue-card">
+            <div class="queue-logo">
+                <div class="nav-logo large">BL</div>
+                <span>BATON LEADS COMPANY</span>
+            </div>
+
+            <div class="queue-animation">
+                <div class="pulse-ring"></div>
+                <div class="pulse-ring delay-1"></div>
+                <div class="pulse-ring delay-2"></div>
+                <div class="queue-icon">👤</div>
+            </div>
+
+            <h2 class="queue-title">Finding Your VA</h2>
+
+            <div class="queue-info">
+                <div class="queue-stat">
+                    <span class="queue-number" id="peopleAhead">3</span>
+                    <span class="queue-label">people ahead of you</span>
+                </div>
+                <div class="queue-divider"></div>
+                <div class="queue-stat">
+                    <span class="queue-number" id="waitTime">~2 min</span>
+                    <span class="queue-label">estimated wait</span>
+                </div>
+            </div>
+
+            <div class="progress-section">
+                <div class="progress-label">
+                    <span id="progressStatus">Searching for available VAs...</span>
+                    <span id="progressPercent">0%</span>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+            </div>
+
+            <div class="queue-steps">
+                <div class="queue-step active" id="step1">
+                    <div class="step-dot"></div>
+                    <span>Searching for available VAs</span>
+                </div>
+                <div class="queue-step" id="step2">
+                    <div class="step-dot"></div>
+                    <span>Matching skills to your request</span>
+                </div>
+                <div class="queue-step" id="step3">
+                    <div class="step-dot"></div>
+                    <span>Connecting you to Sarah</span>
+                </div>
+            </div>
+
+            <p class="queue-note">Please don't close this window. You'll be connected shortly.</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
