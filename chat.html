@@ -13,7 +13,7 @@
         <!-- Sidebar -->
         <div class="chat-sidebar">
             <div class="sidebar-header">
-                <img src="baton-logo.jpeg" class="nav-logo-img" alt="Baton Leads">
+                <img src="baton-logo.jpeg" class="nav-logo-img small" alt="Baton Leads">
             </div>
             <div class="sidebar-info">
                 <div class="info-item">
@@ -46,11 +46,15 @@
                     <li>Your VA is available 24/7</li>
                 </ul>
             </div>
-            <a href="index.html" class="back-home-btn">&#8592; Back to Home</a>
+            <a href="index.html" class="back-home-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+                Back to Home
+            </a>
         </div>
 
-        <!-- Main Chat -->
+        <!-- Main Chat Area -->
         <div class="chat-main">
+
             <!-- Header -->
             <div class="chat-header">
                 <div class="chat-header-info">
@@ -69,7 +73,7 @@
                 <div class="chat-header-actions">
                     <button class="header-btn" title="Call">📞</button>
                     <button class="header-btn" title="Info">ℹ️</button>
-                    <button class="header-btn" title="End chat" onclick="location.href='index.html'">✕</button>
+                    <button class="header-btn danger" title="End chat" onclick="location.href='index.html'">✕</button>
                 </div>
             </div>
 
@@ -106,12 +110,14 @@
                 <button class="quick-btn" onclick="sendQuickReply('Tell me more')">Tell me more</button>
                 <button class="quick-btn" onclick="sendQuickReply('Send referral')">Send referral</button>
                 <button class="quick-btn" onclick="sendQuickReply('Call me')">Call me</button>
+                <button class="quick-btn" onclick="sendQuickReply('What are your services?')">Services</button>
+                <button class="quick-btn" onclick="sendQuickReply('I need urgent help')">Urgent help</button>
             </div>
 
-            <!-- Input -->
+            <!-- Input Area -->
             <div class="input-area">
                 <button class="mic-btn" id="micBtn" onclick="toggleRecording()" title="Voice note">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
                         <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
                         <line x1="12" y1="19" x2="12" y2="23"/>
@@ -119,16 +125,23 @@
                     </svg>
                 </button>
                 <div class="input-wrapper">
-                    <input type="text" id="messageInput" placeholder="Type a message..." onkeypress="handleKeyPress(event)" />
+                    <input
+                        type="text"
+                        id="messageInput"
+                        placeholder="Type a message..."
+                        onkeypress="handleKeyPress(event)"
+                        autocomplete="off"
+                    />
                     <span class="recording-indicator" id="recordingIndicator" style="display:none;">🔴 Recording...</span>
                 </div>
-                <button class="send-btn" onclick="sendMessage()">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <button class="send-btn" onclick="sendMessage()" title="Send">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="22" y1="2" x2="11" y2="13"/>
                         <polygon points="22 2 15 22 11 13 2 9 22 2"/>
                     </svg>
                 </button>
             </div>
+
         </div>
     </div>
     <script src="script.js"></script>

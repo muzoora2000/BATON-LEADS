@@ -10,10 +10,13 @@
 <body class="queue-body">
     <div class="queue-container">
         <div class="queue-card">
+
+            <!-- Logo -->
             <div class="queue-logo">
                 <img src="baton-logo.jpeg" class="nav-logo-img large" alt="Baton Leads Company">
             </div>
 
+            <!-- Pulse Animation -->
             <div class="queue-animation">
                 <div class="pulse-ring"></div>
                 <div class="pulse-ring delay-1"></div>
@@ -23,10 +26,11 @@
 
             <h2 class="queue-title">Finding Your VA</h2>
 
+            <!-- Stats -->
             <div class="queue-info">
                 <div class="queue-stat">
                     <span class="queue-number" id="peopleAhead">3</span>
-                    <span class="queue-label">people ahead of you</span>
+                    <span class="queue-label">people ahead</span>
                 </div>
                 <div class="queue-divider"></div>
                 <div class="queue-stat">
@@ -35,6 +39,7 @@
                 </div>
             </div>
 
+            <!-- Progress Bar -->
             <div class="progress-section">
                 <div class="progress-label">
                     <span id="progressStatus">Searching for available VAs...</span>
@@ -45,22 +50,26 @@
                 </div>
             </div>
 
+            <!-- Steps -->
             <div class="queue-steps">
                 <div class="queue-step active" id="step1">
-                    <div class="step-dot"></div>
+                    <div class="step-dot" id="dot1"></div>
                     <span>Searching for available VAs</span>
                 </div>
                 <div class="queue-step" id="step2">
-                    <div class="step-dot"></div>
+                    <div class="step-dot" id="dot2"></div>
                     <span>Matching skills to your request</span>
                 </div>
                 <div class="queue-step" id="step3">
-                    <div class="step-dot"></div>
+                    <div class="step-dot" id="dot3"></div>
                     <span>Connecting you to Sarah</span>
                 </div>
             </div>
 
-            <p class="queue-note">Please don't close this window. You'll be connected shortly.</p>
+            <p class="queue-note">
+                🔒 &nbsp;Please don't close this window. You'll be connected shortly.
+            </p>
+
         </div>
     </div>
     <script src="script.js"></script>
